@@ -1,8 +1,7 @@
-import numpy as np
+import respiratory_sounds
 from keras import metrics, losses
 from sklearn.model_selection import train_test_split
 
-import respiratory_sounds
 import ausculnet.losses as custom_losses
 from ausculnet.models import simple_dnn
 from ausculnet.preprocessing import extract_features

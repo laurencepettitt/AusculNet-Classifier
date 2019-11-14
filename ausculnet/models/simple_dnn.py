@@ -1,5 +1,6 @@
-from keras.layers import Dense, Embedding, regularizers
+from keras.layers import Dense
 from keras.models import Sequential
+from keras import regularizers
 
 
 def construct_model(num_classes):
