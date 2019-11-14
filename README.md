@@ -1,17 +1,16 @@
 # AusculNet
-
+###### :speaking_head: aw·skuhl·net
 AusculNet is a respiratory disease classifier that takes recordings from electric stethoscopes and uses machine learning techniques to learn to make predictions for eight diagnoses, including healthy.
-
 ## What is the need for AusculNet?
 
 Respiratory disease is a common and significant cause of illness and death around the world. In 2012, respiratory conditions were the most frequent reasons for hospital stays among children.[1] The stethoscope is an acoustic medical device for listening to the internal sounds of a human body. It is often used to detect indicators of respiratory diseases. Studies have shown that auscultation skill (i.e., the ability to make a diagnosis based on what is heard through a stethoscope) has been in decline for some time, such that some medical educators are working to re-establish it.[2][3][4] Here we present an alternative that would require almost no human training. AusculNet is a respiratory disease classifier that takes recordings from an electric stethoscope to make a prediction for eight diagnoses, including healthy. The limited training required would make our method cheaper than a human physician. Moreover, results could be sent digitally for further analysis in the case of a positive diagnosis. All of these features are helpful for purposes of telemedicine (remote diagnosis). Physician’s diagnosis of pneumonia by auscultation had a sensitivity of around 60%.[5] AusculNet has a sensitivity of around 55%.
 
-### Installation
+## Installation
 
-#### For usage
+### For usage
 AusculNet is not yet ready for production usage.
 
-#### For development
+### For development
 Clone the repository to your local environment and change directory into it.
 ```
 git clone git@github.com:laurencepettitt/AusculNet-Classifier.git && cd AusculNet-Classifier
@@ -25,7 +24,7 @@ Install the project's dependencies
 ```
 pip install --editable .
 ```
-### Usage
+## Usage
 You may run ausculnet/training/dnn.py to train the model yourself.
 
 ## References
