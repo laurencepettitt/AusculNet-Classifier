@@ -10,7 +10,7 @@ reqs=[
     'tensorflow==2.0.0',
     'scikit-learn==0.21.3',
     'numpy==1.17.4',
-    'respiratory-sounds'
+    'respiratory-sounds @ git+ssh://git@github.com/laurencepettitt/RespiratorySounds-DataSet@master'
 ]
 
 setup(
@@ -19,8 +19,5 @@ setup(
     packages=['ausculnet'],
     license='MIT',
     long_description=open('README.md').read(),
-    install_requires=reqs,
-    dependency_links=[
-        'git+ssh://git@github.com/laurencepettitt/RespiratorySounds-DataSet.git#egg=respiratory-sounds'
-    ]
+    install_requires=reqs
 )
