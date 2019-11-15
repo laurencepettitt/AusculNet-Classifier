@@ -94,10 +94,30 @@ def extract_or_load_cached_features(sounds: List[Tuple[Any, Any]], feature_names
 
 
 def recursive_sum(l):
+    """
+    Returns sum of all number elements in a list of lists.
+
+    Args:
+        l: list to sum over.
+
+    Returns:
+        Sum of all numbers in both dimensions of list.
+    """
     return sum(i if type(i) in (int, float) else sum(i) for i in l)
 
 
 def recursive_hash_number_list(arr):
+    """
+    Returns a simple checksum of a list of number lists, using addition and adler32.
+
+    Due to the commutativity of addition, this checksum does not care about order of elements.
+
+    Args:
+        arr: list of lists of numbers
+
+    Returns: str
+        checksum of arr
+    """
     s = recursive_sum(arr)
     h = adler32(bytearray(struct.pack('f', s)))
     return str(h)
@@ -151,9 +171,10 @@ def stack_features_up(features: np.ndarray) -> np.ndarray:
 
 def get_features_stacked(data_set=None, features=None):
     """
+    Extracts features from data_set and stacks them up into a flat 1d array.
 
-    Returns:
-
+    Returns: list of lists of floats
+        stacked features of all samples in data_set
     """
     extracted_features = extract_features_from_data_set(data_set, features)
     num_features = extracted_features.shape[1]
@@ -162,20 +183,6 @@ def get_features_stacked(data_set=None, features=None):
         sum_total_features) + ' features from ' + str(num_features) + ' feature types')
     stacked_features = stack_features_up(extracted_features)
     return stacked_features
-
-
-# print('Finished extracting ' + len(feature_names) + 'features from ', len(features[len(feature_names)-1]), ' files')
-
-# plot_example_mfccs = True
-# if plot_example_mfccs:
-#     plot_mfccs(random.sample(features.feature.tolist(), k=3))
-#
-# X = features.mfccs.tolist()
-# y = respiratory_sounds.diagnoses()
-# yy = encode_classification_labels(y)
-# x_train, x_test, y_train, y_test = split_dataset(X, yy)
-#
-# print(x_train.shape)
 
 
 if __name__ == '__main__':

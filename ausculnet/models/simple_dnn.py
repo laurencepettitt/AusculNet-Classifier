@@ -5,10 +5,10 @@ from keras import regularizers
 
 def construct_model(num_classes):
     """
-    Constructs a simple keras Deep Neural Network model
+    Constructs a simple Deep Neural Network model in Keras
 
     Returns:
-        keras model of a Deep Neural Network
+        The constructed Deep Neural Network Keras model
 
     """
     model = Sequential()

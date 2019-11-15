@@ -3,7 +3,7 @@
 
 from setuptools import setup
 
-reqs=[
+requirements = [
     'pandas==0.25.3',
     'librosa==0.7.1',
     'keras==2.3.1',
@@ -19,5 +19,5 @@ setup(
     packages=['ausculnet'],
     license='MIT',
     long_description=open('README.md').read(),
-    install_requires=reqs
+    install_requires=requirements
 )

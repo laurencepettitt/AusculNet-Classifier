@@ -12,6 +12,9 @@ from ausculnet.training.train import training_experiment
 
 
 def train_dnn():
+    """
+    Sets up all hyper-parameters for dnn and runs a training experiment on it.
+    """
     optimizer = 'adam'
     use_focal_loss = False
     loss = custom_losses.focal_loss if use_focal_loss else losses.categorical_crossentropy
@@ -51,27 +54,6 @@ def train_dnn():
     use_class_weighting = True
     num_epochs = 96
     num_batch_size = 32
-
-    # return (
-    #     compiled_model_generator,
-    #     inputs_and_targets,
-    #     num_classes,
-    #     use_class_weighting,
-    #     num_epochs,
-    #     num_batch_size
-    # )
-
-    # TODO - //
-    #  training_experminet.build(compiled_model_generator,
-    #         x_train,
-    #         x_test,
-    #         y_train,
-    #         y_test,
-    #         num_classes,
-    #         use_class_weighting,
-    #         num_epochs,
-    #         num_batch_size)
-    #  training_experiment.run(num_trials)
 
     num_trials = 7
     training_experiment(

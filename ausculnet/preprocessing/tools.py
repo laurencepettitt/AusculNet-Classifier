@@ -35,6 +35,18 @@ def one_hot_encode(y) -> np.ndarray:
 
 
 def filter_samples_by_classes(data_set, classes):
+    """
+    Removes all samples in data_set which are not in classes list
+
+    Args:
+        data_set: pandas dataframe
+            must contain column 'diagnosis_class'
+        classes: list of ints
+            desired classes
+
+    Returns:
+        data_set only with samples with diagnosis_class found in classes list
+    """
     wanted_classes = data_set["diagnosis_class"].value_counts().index.tolist() if classes is None else classes
     class_filter = data_set.diagnosis_class.isin(wanted_classes)
     return data_set[class_filter]

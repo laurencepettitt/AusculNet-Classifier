@@ -1,7 +1,7 @@
 # AusculNet
 
 ###### :speaking_head: aw·skuhl·net
-AusculNet is a respiratory disease classifier that takes recordings from electric stethoscopes and uses machine learning techniques to learn to make predictions for eight diagnoses, including healthy.
+AusculNet is a respiratory disease classifier that can predict a diagnosis of several respiratory diseases based on recordings (or "auscultations") from an electronic stethoscope.
 
 ## What is the need for AusculNet?
 

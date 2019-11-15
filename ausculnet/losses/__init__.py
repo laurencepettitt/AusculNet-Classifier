@@ -5,13 +5,12 @@ import keras.backend as K
 def focal_loss(y_true, y_pred):
     """
     Computes focal loss function
-    TODO - docstrings for focal_loss function
     Args:
-        y_true:
-        y_pred:
+        y_true: list of one-hot vectors of true class
+        y_pred: list of vectors of predicted classes
 
     Returns:
-
+        focal loss of samples
     """
     gamma, alpha = 2.0, 0.25
     pt_1 = tf.where(tf.equal(y_true, 1), y_pred, tf.ones_like(y_pred))

@@ -3,6 +3,16 @@ from keras.models import Sequential
 
 
 def construct_model(num_classes, height):
+    """
+    Constructs the one-dimensional convolutional neural network model in Keras
+
+    Args:
+        num_classes: number of classes in softmax output layer
+        height: height of input shape
+
+    Returns:
+        The constructed 1D CNN Keras model
+    """
     model = Sequential()
     # model.add(Reshape((height, 1), input_shape=(height, 1)))
     model.add(Conv1D(100, 10, activation='relu', input_shape=(height, 1)))

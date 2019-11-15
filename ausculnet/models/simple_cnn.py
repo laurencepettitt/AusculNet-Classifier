@@ -4,6 +4,15 @@ from keras.models import Sequential
 
 
 def construct_model(num_classes):
+    """
+    Constructs a simple convolutional neural network in Keras
+
+    Args:
+        num_classes: number of classes in the softmax output layer
+
+    Returns:
+        The constructed CNN Keras model
+    """
     num_rows = 40
     num_columns = 174
     num_channels = 1
