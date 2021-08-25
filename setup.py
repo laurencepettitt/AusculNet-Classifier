@@ -7,7 +7,7 @@ requirements = [
     'pandas==0.25.3',
     'librosa==0.7.1',
     'keras==2.3.1',
-    'tensorflow==2.0.0',
+    'tensorflow==2.5.1',
     'scikit-learn==0.21.3',
     'numpy==1.17.4',
     'respiratory-sounds @ git+ssh://git@github.com/laurencepettitt/RespiratorySounds-DataSet@master'
