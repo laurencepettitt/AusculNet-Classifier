@@ -9,7 +9,7 @@ requirements = [
     'keras==2.3.1',
     'tensorflow==2.0.0',
     'scikit-learn==0.21.3',
-    'numpy==1.17.4',
+    'numpy==1.22.0',
     'respiratory-sounds @ git+ssh://git@github.com/laurencepettitt/RespiratorySounds-DataSet@master'
 ]
 
